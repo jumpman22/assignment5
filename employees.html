@@ -3,30 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment 05 - Employee Management Application</title>
-    <script src="js/employee-management.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <style>
-	.btn {
-		margin-top: 10px;
-	}
+#delete {
+    background-color: dodgerblue; 
+    border: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 </style>	
 <body>
 <div class="container">
     <h1>The Employee Management Application</h1>
-		<h4>Add Employee</h4>
-	<div class="form-group row">
-			<label>Name:</label>
-			<input class="form-control" type="text" id="name">
-			<label>Title:</label>
-			<input class="form-control" type="text" id="title">
-			<label>Extension:</label>
-			<input class="form-control" type="text" id="extension">
-		<button type="button" class="btn btn-primary">Add</button>
-	</div>
+		
+
+<h4>Add Employee</h4>
+
+<form>
+  Name:<br>
+  <input id="name" type="text" placeholder="Name"/><br>
+  Title:<br>
+  <input id="title" type="text" placeholder="Title"/><br>
+  Extension:<br>
+  <input id="extension" type="text" placeholder="Extension"/>
+  <br><br>
+  <input type="button" value="Add" onclick="insert()" />
+</form> 
+
+  <table id="display" style="width: 100%"></table>
+
 </div>
-	<div class="container">
-			<table border="1"></table>
-	</div>
+<script src="js/employee-management.js"></script>
 </body>
 </html>
